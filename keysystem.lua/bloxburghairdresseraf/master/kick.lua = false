@@ -1,0 +1,92 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local TopMain = Instance.new("Frame")
+local KeySystem = Instance.new("Frame")
+local Con = Instance.new("TextButton")
+local TextButton = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+TopMain.Name = "TopMain"
+TopMain.Parent = ScreenGui
+TopMain.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+TopMain.BorderColor3 = Color3.fromRGB(54, 54, 54)
+TopMain.Position = UDim2.new(0.339285731, 0, 0.359081417, 0)
+TopMain.Size = UDim2.new(0, 323, 0, 22)
+TopMain.Active = true
+TopMain.Selectable = true
+TopMain.Draggable = true
+
+KeySystem.Name = "KeySystem"
+KeySystem.Parent = TopMain
+KeySystem.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+KeySystem.BorderColor3 = Color3.fromRGB(54, 54, 54)
+KeySystem.Position = UDim2.new(0, 0, 1, 0)
+KeySystem.Size = UDim2.new(0, 323, 0, 142)
+
+Con.Name = "Con"
+Con.Parent = KeySystem
+Con.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Con.Position = UDim2.new(0.188854486, 0, 0.690140843, 0)
+Con.Size = UDim2.new(0, 200, 0, 26)
+Con.Font = Enum.Font.SourceSans
+Con.Text = "CONTINUE"
+Con.TextColor3 = Color3.fromRGB(0, 0, 0)
+Con.TextSize = 14.000
+
+Con.MouseButton1Click:Connect(function()
+	if TextButton.Text = "ei3mvzy4k" then
+		TopMain.Visible = false
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/NoahPlayZ124/SmoshAF/main/bloxburghairdresserautofarm/auto-farm/farm/master/blob/source/SmoshAF.lua'),true))()
+	end
+end)
+
+
+TextButton.Name = "TextButton"
+TextButton.Parent = KeySystem
+TextButton.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+TextButton.BorderColor3 = Color3.fromRGB(54, 54, 54)
+TextButton.Position = UDim2.new(0.142414764, 0, 0.211267605, 0)
+TextButton.Size = UDim2.new(0, 240, 0, 50)
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+TextButton.PlaceholderText = "_KEY HERE"
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 22.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(170, 0, 0)
+TextButton.TextXAlignment = Enum.TextXAlignment.Left
+
+TextLabel.Parent = TopMain
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, -0.0185659379, 0)
+TextLabel.Size = UDim2.new(0, 64, 0, 22)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Smoshy"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 22.000
+TextLabel.TextStrokeTransparency = 0.000
+
+Close.Name = "Close"
+Close.Parent = TopMain
+Close.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Close.BorderColor3 = Color3.fromRGB(65, 65, 65)
+Close.Position = UDim2.new(0.885448933, 0, 0.13636364, 0)
+Close.Size = UDim2.new(0, 37, 0, 15)
+Close.Font = Enum.Font.SourceSansSemibold
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 16.000
+
+Close.MouseButton1Click:Connect(function()
+	TopMain.Visible = false
+end)
